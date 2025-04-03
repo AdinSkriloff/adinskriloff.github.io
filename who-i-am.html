@@ -22,7 +22,6 @@
                 I am currently a passionate developer and creative thinker, focused on building impactful solutions. My work revolves around blending technology, storytelling, and human behavior to create meaningful experiences.
             </p>
         </section>
-        <hr>
 
         <!-- Values & Strengths Section -->
         <section class="who-i-am-section values" data-aos="fade-up" data-aos-duration="800">
@@ -31,7 +30,6 @@
                 Collaboration, creativity, and adaptability are at the core of my work. I excel at problem-solving, critical thinking, and connecting with others to bring ideas to life. My strengths lie in leadership, communication, and a people-first approach.
             </p>
         </section>
-        <hr>
 
         <!-- Journey Section -->
         <section class="who-i-am-section journey" data-aos="fade-up" data-aos-duration="800">
@@ -41,7 +39,7 @@
             </p>
         </section>
     </main>
-    <footer class="who-i-am-footer" data-aos="fade-up"> <!-- Add AOS animation -->
+    <footer class="who-i-am-footer" id="back-to-home">
         <a href="index.html">Back to Home</a>
     </footer>
 
@@ -115,10 +113,15 @@
 
         .who-i-am-footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
             background-color: #ffffff; /* Solid white background */
             color: #007aff; /* Accent blue */
             border-top: 1px solid #e5e5ea; /* Subtle gray border */
+            position: fixed; /* Make footer sticky */
+            bottom: 0; /* Stick to the bottom of the viewport */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it stays above other content */
+            display: none; /* Initially hidden */
         }
 
         .who-i-am-footer a {
@@ -140,12 +143,28 @@
             .who-i-am-section p {
                 font-size: 16px;
             }
+
+            .who-i-am-footer {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
         }
     </style>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Add AOS JS -->
     <script>
         AOS.init(); // Initialize AOS
+
+        document.addEventListener("scroll", function () {
+            const footer = document.getElementById("back-to-home");
+            const scrollHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.innerHeight + window.scrollY;
+
+            if (scrollPosition >= scrollHeight) {
+                footer.style.display = "block"; // Show footer when at the bottom
+            } else {
+                footer.style.display = "none"; // Hide footer otherwise
+            }
+        });
     </script>
 </body>
 
