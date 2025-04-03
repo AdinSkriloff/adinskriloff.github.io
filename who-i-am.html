@@ -39,9 +39,10 @@
             </p>
         </section>
     </main>
-    <footer class="who-i-am-footer" id="back-to-home">
-        <a href="index.html">Back to Home</a>
-    </footer>
+
+    <button class="scroll-left" onclick="location.href='index.html'">
+        <i class='bx bxs-left-arrow'></i>
+    </button>
 
     <style>
         body {
@@ -112,26 +113,35 @@
         }
 
         .who-i-am-footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff; /* Solid white background */
-            color: #007aff; /* Accent blue */
-            border-top: 1px solid #e5e5ea; /* Subtle gray border */
-            position: fixed; /* Make footer sticky */
-            bottom: 0; /* Stick to the bottom of the viewport */
-            width: 100%; /* Full width */
-            z-index: 1000; /* Ensure it stays above other content */
-            display: none; /* Initially hidden */
+            display: none; /* Remove the footer */
         }
 
-        .who-i-am-footer a {
-            color: #007aff; /* Accent blue */
-            text-decoration: none;
-            font-weight: 500;
+        .scroll-left {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007aff; /* Accent blue */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .who-i-am-footer a:hover {
-            text-decoration: underline;
+        .scroll-left:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+            transform: translateY(-3px); /* Lift effect */
+        }
+
+        .scroll-left i {
+            font-size: 20px;
         }
 
         @media screen and (max-width: 600px) {
