@@ -60,10 +60,10 @@
             padding: 120px 20px;
             color: white;
             background: 
-                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('images/adin-bg.jpg') no-repeat center center/cover; /* Updated with the new image filename */
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('images/adin-bg.jpg') no-repeat top center/cover; /* Adjusted position */
+            background-position: top center; /* Ensures the top part of the image is visible */
             background-size: cover;
-            background-position: center;
             border-bottom: 1px solid #e5e5ea;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
@@ -76,7 +76,7 @@
         @media (max-width: 768px) {
             .who-i-am-header {
                 padding: 80px 15px;
-                background-position: top center;
+                background-position: top center; /* Keeps the top part visible on smaller screens */
             }
         }
 
