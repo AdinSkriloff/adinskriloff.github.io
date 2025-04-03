@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume | Adin Skriloff</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .resume-viewer {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .resume-viewer h1 {
+            margin-bottom: 30px;
+        }
+
+        .resume-frame {
+            width: 90%;
+            height: 90vh;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-left {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007aff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .scroll-left:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+        }
+
+        .scroll-left i {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-viewer">
+        <h1>My Resume</h1>
+        <iframe src="assets/resume.pdf" class="resume-frame"></iframe>
+    </div>
+
+    <button class="scroll-left" onclick="location.href='index.html'">
+        <i class='bx bxs-left-arrow'></i>
+    </button>
+</body>
+
+</html>
