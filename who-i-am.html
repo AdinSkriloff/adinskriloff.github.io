@@ -58,27 +58,26 @@
 
     <style>
         /* Scope About Me page styles under .who-i-am-page */
-        .who-i-am-page .header-image-wrapper {
-            height: auto; /* Allow the image to determine the height */
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 0; /* Ensure no gap below the header */
-        }
-
         .who-i-am-page header {
-            margin-bottom: 0; /* Remove bottom margin from the header */
-            padding-bottom: 0;
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            background-color: #2b2f4b; /* Same as homepage hero */
+            color: #fff;
+            overflow: hidden;
         }
 
-        .who-i-am-page .snapshot {
-            margin-top: 0 !important; /* Force the Snapshot section to start at the very top */
+        .who-i-am-page .header-image-wrapper {
+            height: 100%; /* Full height of the header */
+            width: 100%;
+            position: relative;
         }
 
         .who-i-am-page .header-image-wrapper img {
             width: 100%;
-            height: auto; /* Maintain aspect ratio to show the full image */
-            object-fit: contain; /* Ensure the entire image is visible */
-            display: block;
+            height: 100%;
+            object-fit: cover; /* Cover the entire area */
+            object-position: center 10%; /* Adjust to keep the top part visible */
+            display: block; /* Ensure proper rendering */
         }
 
         .who-i-am-page .overlay-text {
@@ -92,8 +91,24 @@
         }
 
         .who-i-am-page .overlay-text h1 {
-            font-size: 48px;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+            font-size: 5rem; /* Larger font size for hero feel */
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+        }
+
+        .who-i-am-page header::before {
+            content: '';
+            background: rgba(43, 47, 75, 0.6); /* Dark overlay for better contrast */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .who-i-am-page .who-i-am-section:first-of-type {
+            margin-top: 40px; /* Add margin between hero and first section */
         }
 
         @media (max-width: 768px) {
@@ -110,11 +125,6 @@
             background-color: #ffffff; /* Solid white to match the header */
             margin-top: 0; /* Removed extra margin */
             padding-top: 0;
-        }
-        
-
-        .who-i-am-page .who-i-am-section:first-of-type {
-            margin-top: 0; /* Removed gap for the first section */
         }
 
         .who-i-am-page .who-i-am-section {
