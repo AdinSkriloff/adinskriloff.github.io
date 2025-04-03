@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <header class="who-i-am-header" data-aos="fade-up"> <!-- Add AOS animation -->
-        <h1>Who I Am</h1>
+    <header class="who-i-am-header" data-aos="fade-up">
+        <h1>About Me</h1>
     </header>
     <main>
         <!-- Snapshot Section -->
@@ -22,7 +22,6 @@
                 I am currently a passionate developer and creative thinker, focused on building impactful solutions. My work revolves around blending technology, storytelling, and human behavior to create meaningful experiences.
             </p>
         </section>
-        <hr>
 
         <!-- Values & Strengths Section -->
         <section class="who-i-am-section values" data-aos="fade-up" data-aos-duration="800">
@@ -31,7 +30,6 @@
                 Collaboration, creativity, and adaptability are at the core of my work. I excel at problem-solving, critical thinking, and connecting with others to bring ideas to life. My strengths lie in leadership, communication, and a people-first approach.
             </p>
         </section>
-        <hr>
 
         <!-- Journey Section -->
         <section class="who-i-am-section journey" data-aos="fade-up" data-aos-duration="800">
@@ -58,10 +56,27 @@
 
         .who-i-am-header {
             text-align: center;
-            padding: 60px 20px;
-            background-color: #ffffff; /* Solid white background */
-            color: #007aff; /* Accent blue */
-            border-bottom: 1px solid #e5e5ea; /* Subtle gray border */
+            padding: 120px 20px;
+            color: white;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('images/adin-bg.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #e5e5ea;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .who-i-am-header h1 {
+            font-size: 48px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .who-i-am-header {
+                padding: 80px 15px;
+                background-position: top center;
+            }
         }
 
         .who-i-am-section {
