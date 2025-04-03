@@ -91,20 +91,15 @@
         }
 
         .who-i-am-page .overlay-text h1 {
-            font-size: 5rem; /* Larger font size for hero feel */
+            font-size: 4rem; /* Reduced font size for a smaller "About Me" */
             font-family: 'Ubuntu', sans-serif;
             font-weight: 500;
         }
 
-        .who-i-am-page header::before {
-            content: '';
-            background: rgba(43, 47, 75, 0.6); /* Dark overlay for better contrast */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
+        @media (max-width: 768px) {
+            .who-i-am-page .overlay-text h1 {
+                font-size: 32px; /* Adjust font size for smaller screens */
+            }
         }
 
         .who-i-am-page .who-i-am-section:first-of-type {
