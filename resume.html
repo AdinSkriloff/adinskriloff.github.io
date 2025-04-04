@@ -34,8 +34,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007aff;
-            color: white;
+            background-color: #f0f7fc; /* Match the background color of the index page arrow */
+            color: #0f0f0f; /* Darker arrow color for better contrast */
             border: none;
             border-radius: 50%;
             width: 50px;
@@ -50,12 +50,20 @@
         }
 
         .scroll-left:hover {
-            background-color: #005bb5;
+            background-color: #a7bace; /* Slightly darker shade on hover to match index page */
             transform: translateY(-3px);
         }
 
         .scroll-left i {
             font-size: 20px;
+        }
+
+        h1 {
+            color: #003f7d; /* Darker blue for the title */
+            font-size: 36px; /* Ensure a prominent title size */
+            text-align: center; /* Center-align the title */
+            margin-top: 20px; /* Add spacing at the top */
+            font-family: 'Ubuntu', sans-serif; /* Consistent font with the index class */
         }
     </style>
 </head>
