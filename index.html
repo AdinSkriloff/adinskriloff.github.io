@@ -74,23 +74,30 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007aff;
-            color: white;
+            background-color: #f0f7fc; /* Match the background color */
+            color: #1c1c1e; /* Adjust arrow color for contrast */
             border: none;
             border-radius: 50%;
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Center the arrow horizontally and vertically */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             z-index: 1000;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center; /* Ensure proper alignment */
+        }
+
+        .scroll-top i {
+            font-size: 20px; /* Ensure the arrow is properly sized */
+            line-height: 1; /* Remove any extra spacing */
+            display: inline-block; /* Ensure proper rendering */
         }
 
         .scroll-top:hover {
-            background-color: #005bb5;
+            background-color: #e1ecf7; /* Slightly darker shade on hover */
             transform: translateY(-3px);
         }
 
@@ -117,7 +124,7 @@
             <a href="resume.html">Resume</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up">
             <img src="assets/logo.png" alt="Adin Skriloff logo">
             <div class="info">
                 <h1>Passionate Developer & Creative Thinker</h1>
