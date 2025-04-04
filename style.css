@@ -222,6 +222,13 @@ header .info-text .scroll::before{
     border-color: #fff;
     box-shadow: none;
 }
+.scroll-top i {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 22px;
+    text-align: center;
+}
 /* Make the entire card clickable */
 .card-link {
     text-decoration: none;
