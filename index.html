@@ -6,11 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Personal Portfolio #2 | Adin Skriloff</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <title>Adin Skriloff | Personal Portfolio</title>
+    <style>
+
+        .about-hero {
+            position: relative;
+            height: 100vh;
+            background: url('images/adin-bg.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-radius: 0;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(43, 47, 75, 0.6);
+            z-index: 1;
+        }
+
+        .about-hero .overlay-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-size: 4rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .card {
+            padding: 80px 40px; /* Increased padding for larger cards */
+            background-color: #ffffff; /* Clean solid white for seamless flow */
+            max-width: 900px; /* Increased width for larger cards */
+            margin: 80px auto; /* Increased margin for more spacing between cards */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px); /* Smooth lift effect */
+        }
+
+        .card h2 {
+            color: #007aff;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .card p {
+            font-size: 18px;
+            color: #1c1c1e;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007aff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .scroll-top:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <header>
         <div id="particles"></div>
         <div class="info-text">
@@ -22,66 +114,51 @@
 
     <section id="about">
         <div class="header">
-            <h1>About Me</h1>
-            <a href="resume.html">Hire Me</a>
+            <a href="resume.html">Resume</a>
         </div>
 
         <div class="card">
-            <img src="assets/logo.png">
+            <img src="assets/logo.png" alt="Adin Skriloff logo">
             <div class="info">
                 <h1>Passionate Developer & Creative Thinker</h1>
                 <p>
-                    I’m Adin Skriloff — a curious, people-driven problem solver studying at James Madison University. I
-                    thrive at the intersection of data, storytelling, and human behavior, with a passion for people
-                    analytics and making insights meaningful.
-
-                    Known for being thoughtful, personable, and a natural communicator, I bring leadership, critical
-                    thinking, and a collaborative mindset to every challenge. Whether I’m working through complex
-                    problems or connecting with others, I believe good ideas start with great conversations.
+                    I’m Adin Skriloff — a curious, people-driven problem solver studying at James Madison University. I thrive at the intersection of data, storytelling, and human behavior, with a passion for people analytics and making insights meaningful.
+                    <br><br>
+                    Known for being thoughtful, personable, and a natural communicator, I bring leadership, critical thinking, and a collaborative mindset to every challenge. Whether I’m working through complex problems or connecting with others, I believe good ideas start with great conversations.
                 </p>
-
             </div>
         </div>
-    </section>
 
-    <section id="features">
-        <div class="header">
-            <h1>Features</h1>
-            <a href="#">See More</a>
+        <section class="about-hero">
+            <div class="overlay-text">
+                <h1>About Me</h1>
+            </div>
+        </section>
+
+        <div class="card" data-aos="fade-up">
+            <div class="info">
+                <h2>Snapshot</h2>
+                <p>
+                    I am currently a passionate developer and creative thinker, focused on building impactful solutions. My work revolves around blending technology, storytelling, and human behavior to create meaningful experiences.
+                </p>
+            </div>
         </div>
-        <div class="feature-cards">
-            <div class="card">
-                <a href="who-i-am.html" class="card-link">
-                    <div class="info">
-                        <i class='bx bxs-user'></i>
-                        <h1>About Me</h1>
-                        <p>
-                            Learn more about my journey, background, and the values that drive me as a developer and
-                            creative thinker.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <i class='bx bxs-briefcase'></i>
 
-                    <h1>Work & Projects</h1>
-                    <p></p>
-                        Explore my projects and the skills I bring to the table, from web development to creative
-                        problem-solving.
-                    </p>
-                </div>
+        <div class="card" data-aos="fade-up">
+            <div class="info">
+                <h2>Values & Strengths</h2>
+                <p>
+                    Collaboration, creativity, and adaptability are at the core of my work. I excel at problem-solving, critical thinking, and connecting with others to bring ideas to life. My strengths lie in leadership, communication, and a people-first approach.
+                </p>
             </div>
-            <div class="card">
-                <div class="info">
-                    <i class='bx bxs-cog'></i>
-                    <h1>Mindset & Method</h1>
-                    <p>
-                        Discover my approach to coding, collaboration, and delivering impactful solutions through
-                        thoughtful design.
-                    </p>
-                </div>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <div class="info">
+                <h2>My Journey</h2>
+                <p>
+                    My journey began with a curiosity for technology and a drive to make a difference. Over the years, I’ve honed my skills through education and hands-on experience. Looking forward, I aim to continue growing as a developer and contributing to projects that inspire and create value.
+                </p>
             </div>
         </div>
     </section>
@@ -91,6 +168,11 @@
     </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
