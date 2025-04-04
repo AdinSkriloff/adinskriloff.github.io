@@ -214,8 +214,8 @@ header .info-text .scroll::before{
     z-index: 1000;
     transition: background-color 0.3s ease, transform 0.3s ease;
     padding: 0;
-    line-height: 1;
     text-align: center;
+    line-height: 50px;
 }
 
 .scroll-top:hover{
