@@ -101,13 +101,21 @@ header .info-text .scroll::before{
     margin-bottom: 40px;
 }
 
+#about .header {
+    display: flex;
+    justify-content: center; /* Center the boxes */
+    align-items: center;
+    gap: 40px; /* Add more spacing between the boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
 #about .header h1, #features .header h1{
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
 }
 
-#about .header a, #features .header a{
+#about .header a {
     text-decoration: none;
     font-size: 1.3em;
     color: #ffffff;
@@ -116,6 +124,9 @@ header .info-text .scroll::before{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 6px;
     transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Ensure proper alignment */
+    margin: 10px 0; /* Add vertical spacing for smaller screens */
 }
 
 #about .header a:hover, #features .header a:hover{
@@ -259,4 +270,11 @@ header .info-text .scroll::before{
         max-height: 150px;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    #about .header {
+        flex-direction: column; /* Stack the boxes vertically on smaller screens */
+        gap: 20px; /* Reduce spacing between the stacked boxes */
+    }
 }
